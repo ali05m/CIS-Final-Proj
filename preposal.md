@@ -2,7 +2,7 @@
 
 ## What idea(s) do you have for your final project?
 
-Stock prediction for increase and decrease using news sources that involve the particular ticker
+Stock prediction for increase and decrease using news sources, old data, repeating movements,etc. that involve the particular ticker
 
 Product Picker- Fetching the particular product needed from around the web and/or combinations of that product for the cheapest price and/or the best quality through review ratings
 
