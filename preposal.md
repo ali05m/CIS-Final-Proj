@@ -13,6 +13,6 @@ Unclear currently.
 
 ## Do you have any questions of your own?
 
-If I successfully make the projects above can I increase there complexity?.
+If I successfully make the projects above can I increase there complexity?
 
 Can I grab data from other codes that involve the stock market to make my project more reliable?
