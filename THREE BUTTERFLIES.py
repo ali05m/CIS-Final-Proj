@@ -1,11 +1,13 @@
-import robin_stocks.robinhood as r
+#Robinhood API
+import robin_stocks.robinhood as rh
 from datetime import datetime
 
-# Step 1: Login to Robinhood
-USERNAME = ""
-PASSWORD = ""
 
-r.login(USERNAME, PASSWORD)
+# Step 1: Login to Robinhood
+USERNAME ="JohnDoe@hotmail.com"
+PASSWORD ="Abc123"
+
+rh.login(USERNAME, PASSWORD)
 
 # Get the nearest expiration date for SPY options
 def get_nearest_expiration(symbol="SPY"):
@@ -60,8 +62,8 @@ def three_way_butterfly(symbol="SPY"):
     # Select middle strike for selling two options
     middle_strike = round(strike_prices[len(strike_prices) // 2])  # Round to nearest integer
     higher_strike = middle_strike + 1  # Adjust according to market conditions
-    lower_strike = middle_strike - 1   # Adjust according to market conditions
-
+    lower_strike = middle_strike -1 # Adjust according to market conditions
+#ignore
     print(f"\n📅 Three-Way Butterfly Strategy for {symbol} Options (Expiration: {get_nearest_expiration()}):")
     print(f"Buy {lower_strike} Put, Sell 2 x {middle_strike} Puts, Buy {higher_strike} Put")
 
@@ -70,6 +72,7 @@ def three_way_butterfly(symbol="SPY"):
     middle_strike_option = next((opt for opt in put_options if float(opt["strike_price"]) == middle_strike), None)
     higher_strike_option = next((opt for opt in put_options if float(opt["strike_price"]) == higher_strike), None)
 
+#Quality Control
     if lower_strike_option and middle_strike_option and higher_strike_option:
         print(f"Lower Strike ({lower_strike}): {lower_strike_option['ask_price']}")
         print(f"Middle Strike ({middle_strike}): {middle_strike_option['ask_price']}")
@@ -79,3 +82,7 @@ def three_way_butterfly(symbol="SPY"):
 
 # Run the function to display three-way butterfly
 three_way_butterfly()
+
+
+
+#MFA DOES NOT WORK. Robinhood Security Update.
